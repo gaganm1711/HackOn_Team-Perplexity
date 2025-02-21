@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Forum</title>
+  <link rel="stylesheet" href="style_c.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="manage-users.html">Manage Users</a></li>
+        <li><a href="manage-quests.html">Manage Quests</a></li>
+        <li><a href="manage-quizzes.html">Manage History Quizzes</a></li>
+        <li><a href="manage-forum.html">Manage Forum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Manage Forum Posts</h2>
+      
+      <div id="search-bar">
+        <input type="text" placeholder="Search forum posts..." id="forum-search">
+        <button onclick="searchPost()">Search</button>
+      </div>
+
+      <table id="forum-table">
+        <thead>
+          <tr>
+            <th>Post Title</th>
+            <th>Author</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="forum-list">
+          <tr id="post-row-1">
+            <td class="post-title">The History of World War II</td>
+            <td class="post-author">John Doe</td>
+            <td class="post-date">2025-02-20</td>
+            <td class="post-status">Active</td>
+            <td>
+              <button class="edit" onclick="openModal(1)">Edit</button>
+              <button class="delete" onclick="deletePost(1)">Delete</button>
+            </td>
+          </tr>
+          <tr id="post-row-2">
+            <td class="post-title">Ancient Egypt: Mysteries Unraveled</td>
+            <td class="post-author">Jane Smith</td>
+            <td class="post-date">2025-02-19</td>
+            <td class="post-status">Archived</td>
+            <td>
+              <button class="edit" onclick="openModal(2)">Edit</button>
+              <button class="delete" onclick="deletePost(2)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="add-post-btn" onclick="openModal()">Add New Post</button>
+    </section>
+
+    <!-- Modal for adding/editing forum posts -->
+    <div id="post-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Manage Forum Post</h3>
+        <form id="post-form" onsubmit="savePost(event)">
+          <label for="post-title">Post Title:</label>
+          <input type="text" id="post-title" required>
+
+          <label for="post-author">Author:</label>
+          <input type="text" id="post-author" required>
+
+          <label for="post-date">Date:</label>
+          <input type="date" id="post-date" required>
+
+          <label for="post-status">Status:</label>
+          <select id="post-status" required>
+            <option value="active">Active</option>
+            <option value="archived">Archived</option>
+            <option value="pending">Pending</option>
+          </select>
+
+          <button type="submit">Save Post</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GamifyHistory. All rights reserved.</p>
+  </footer>
+
+  <script src="script_c.js"></script>
+</body>
+</html>

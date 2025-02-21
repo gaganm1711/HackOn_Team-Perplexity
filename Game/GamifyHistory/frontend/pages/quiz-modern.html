@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Revolutions Quiz | GamifyHistory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #e8d3a9;
+            text-align: center;
+            padding: 50px;
+        }
+        .quiz-container {
+            max-width: 700px;
+            margin: auto;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(255, 223, 0, 0.6);
+            border: 3px solid #ffcc00;
+        }
+        .question {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .options button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .options button:hover {
+            background: #ff9900;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Modern Revolutions Quiz</h1>
+        <div id="quiz"></div>
+        <p id="result"></p>
+    </div>
+    <script>
+        const questions = [
+            { question: "Who was the leader of the Russian Revolution in 1917?", options: ["Lenin", "Stalin", "Trotsky", "Tsar Nicholas II"], answer: "Lenin" },
+            { question: "Which event sparked the French Revolution in 1789?", options: ["Storming of the Bastille", "Execution of Louis XVI", "Reign of Terror", "Napoleonic Wars"], answer: "Storming of the Bastille" },
+            { question: "When did the American Revolution officially end?", options: ["1783", "1776", "1801", "1799"], answer: "1783" },
+            { question: "Who was the main author of the Declaration of Independence?", options: ["Thomas Jefferson", "George Washington", "John Adams", "Benjamin Franklin"], answer: "Thomas Jefferson" },
+            { question: "Which country’s revolution led to the abolition of slavery in 1804?", options: ["Haiti", "Brazil", "Cuba", "United States"], answer: "Haiti" },
+            { question: "What was the main cause of the Industrial Revolution?", options: ["Technological advancements", "War", "Religious reforms", "Colonization"], answer: "Technological advancements" },
+            { question: "What was the name of Mao Zedong’s revolution in China?", options: ["Cultural Revolution", "Great Leap Forward", "Boxer Rebellion", "Taiping Rebellion"], answer: "Cultural Revolution" },
+            { question: "Who led India's independence movement against British rule?", options: ["Mahatma Gandhi", "Jawaharlal Nehru", "Subhas Chandra Bose", "Sardar Patel"], answer: "Mahatma Gandhi" },
+            { question: "Which event marked the start of the Cuban Revolution?", options: ["Attack on Moncada Barracks", "Bay of Pigs Invasion", "Missile Crisis", "Castro's exile"], answer: "Attack on Moncada Barracks" },
+            { question: "What year did the Berlin Wall fall, symbolizing the end of the Cold War?", options: ["1989", "1991", "1985", "1979"], answer: "1989" },
+            { question: "Who was the first democratically elected President of South Africa?", options: ["Nelson Mandela", "Desmond Tutu", "Jacob Zuma", "Cyril Ramaphosa"], answer: "Nelson Mandela" },
+            { question: "What was the purpose of the Arab Spring protests?", options: ["Demanding democracy", "Expanding trade", "Religious reforms", "Colonization"], answer: "Demanding democracy" },
+            { question: "Which revolution led to the overthrow of the Shah of Iran in 1979?", options: ["Iranian Revolution", "Arab Spring", "Turkish War of Independence", "Yemeni Uprising"], answer: "Iranian Revolution" },
+            { question: "Which country gained independence from British rule in 1947?", options: ["India", "South Africa", "Canada", "Australia"], answer: "India" },
+            { question: "Who was the leader of the Bolshevik Party during the Russian Revolution?", options: ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Karl Marx"], answer: "Vladimir Lenin" }
+        ];
+        
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            if (currentQuestion >= questions.length) {
+                document.getElementById("quiz").innerHTML = `<h2>Quiz Completed!</h2><p>Your Score: ${score} / ${questions.length}</p>`;
+                return;
+            }
+            let q = questions[currentQuestion];
+            let optionsHTML = q.options.map(option => `<button onclick="checkAnswer('${option}')">${option}</button>`).join('');
+            document.getElementById("quiz").innerHTML = `<div class='question'>${q.question}</div><div class='options'>${optionsHTML}</div>`;
+        }
+        
+        function checkAnswer(answer) {
+            if (answer === questions[currentQuestion].answer) {
+                score++;
+            }
+            currentQuestion++;
+            loadQuestion();
+        }
+        
+        loadQuestion();
+    </script>
+</body>
+</html>

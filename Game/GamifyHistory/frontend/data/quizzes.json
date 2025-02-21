@@ -1,0 +1,58 @@
+{
+    "quizzes": [
+        {
+            "id": 1,
+            "title": "Ancient Civilizations",
+            "description": "Explore the mysteries of Egypt, Rome, and beyond!",
+            "image": "assets/ancient.jpg",
+            "questions": [
+                {
+                    "question": "Which civilization built the pyramids?",
+                    "options": ["Romans", "Greeks", "Egyptians", "Mayans"],
+                    "answer": "Egyptians"
+                },
+                {
+                    "question": "Who was the first emperor of China?",
+                    "options": ["Qin Shi Huang", "Kublai Khan", "Sun Tzu", "Liu Bang"],
+                    "answer": "Qin Shi Huang"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Medieval Legends",
+            "description": "Test your knowledge of knights, kings, and castles.",
+            "image": "assets/medieval.jpg",
+            "questions": [
+                {
+                    "question": "What was the name of the document signed by King John of England in 1215?",
+                    "options": ["Bill of Rights", "Magna Carta", "Domesday Book", "Treaty of Versailles"],
+                    "answer": "Magna Carta"
+                },
+                {
+                    "question": "Which famous warrior led the Mongol Empire?",
+                    "options": ["Attila the Hun", "Genghis Khan", "Alexander the Great", "Charlemagne"],
+                    "answer": "Genghis Khan"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Modern Revolutions",
+            "description": "Unravel the events that shaped the world today.",
+            "image": "assets/modern.jpg",
+            "questions": [
+                {
+                    "question": "In which year did the French Revolution begin?",
+                    "options": ["1789", "1812", "1603", "1848"],
+                    "answer": "1789"
+                },
+                {
+                    "question": "Who was the first President of the United States?",
+                    "options": ["Thomas Jefferson", "Benjamin Franklin", "George Washington", "John Adams"],
+                    "answer": "George Washington"
+                }
+            ]
+        }
+    ]
+}

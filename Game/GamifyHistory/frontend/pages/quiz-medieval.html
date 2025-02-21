@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medieval Legends Quiz | GamifyHistory</title>
+    <style>
+        body {
+            font-family: 'Cinzel', serif;
+            background-color: #000;
+            color: #e8d3a9;
+            text-align: center;
+            padding: 50px 10%;
+        }
+        .quiz-container {
+            background: rgba(15, 15, 15, 0.95);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(255, 223, 0, 0.6);
+            border: 3px solid #ffcc00;
+        }
+        .question {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+        .option {
+            display: block;
+            background: #ffcc00;
+            color: black;
+            padding: 10px;
+            margin: 10px auto;
+            width: 60%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .option:hover {
+            background: #ff9900;
+        }
+        .btn {
+            background: #ffcc00;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Medieval Legends Quiz</h1>
+    <div class="quiz-container" id="quiz-container">
+        <div id="question-container"></div>
+        <button class="btn" onclick="submitQuiz()">Submit Quiz</button>
+    </div>
+    <script>
+        const questions = [
+            { question: "Who led the Norman conquest of England in 1066?", options: ["King John", "William the Conqueror", "Richard the Lionheart", "Henry II"], answer: "William the Conqueror" },
+            { question: "What was the dominant religion of Medieval Europe?", options: ["Islam", "Paganism", "Christianity", "Buddhism"], answer: "Christianity" },
+            { question: "Which war was fought between England and France from 1337 to 1453?", options: ["The Thirty Years' War", "The Hundred Years' War", "The War of the Roses", "The Napoleonic Wars"], answer: "The Hundred Years' War" },
+            { question: "What was the system of land ownership and duty called in medieval Europe?", options: ["Capitalism", "Feudalism", "Democracy", "Mercantilism"], answer: "Feudalism" },
+            { question: "Who was the famous female warrior that fought for France during the Hundred Years' War?", options: ["Joan of Arc", "Eleanor of Aquitaine", "Isabella of Castile", "Anne Boleyn"], answer: "Joan of Arc" },
+            { question: "Which medieval king signed the Magna Carta in 1215?", options: ["King Henry VIII", "King Richard I", "King John", "King Edward I"], answer: "King John" },
+            { question: "What was the purpose of a medieval castle?", options: ["Religious worship", "Defense and residence", "Trade center", "Public executions"], answer: "Defense and residence" },
+            { question: "What was the main cause of the Black Death?", options: ["Bad air", "Rats and fleas", "Cursed objects", "Witchcraft"], answer: "Rats and fleas" },
+            { question: "Which of these knights was part of King Arthur’s Round Table?", options: ["Sir Lancelot", "Sir Francis Drake", "Sir Thomas More", "Sir William Wallace"], answer: "Sir Lancelot" },
+            { question: "Which battle in 1066 led to Norman rule in England?", options: ["Battle of Agincourt", "Battle of Hastings", "Battle of Stamford Bridge", "Battle of Bannockburn"], answer: "Battle of Hastings" },
+            { question: "What was the title of the leader of the Catholic Church in medieval times?", options: ["Emperor", "King", "Pope", "Archbishop"], answer: "Pope" },
+            { question: "Who was known as the Lionheart?", options: ["Henry II", "William Wallace", "Richard I", "Edward III"], answer: "Richard I" },
+            { question: "Which medieval city was known as the center of learning and culture in the Islamic world?", options: ["Paris", "Baghdad", "Rome", "Venice"], answer: "Baghdad" },
+            { question: "What was the main purpose of medieval guilds?", options: ["Political power", "Economic control", "Religious authority", "Military training"], answer: "Economic control" },
+            { question: "What famous document limited the power of the English monarchy?", options: ["The Bill of Rights", "The Constitution", "The Magna Carta", "The Domesday Book"], answer: "The Magna Carta" }
+        ];
+        
+        function loadQuiz() {
+            let quizContainer = document.getElementById("question-container");
+            questions.forEach((q, index) => {
+                let questionBlock = document.createElement("div");
+                questionBlock.innerHTML = `<p class='question'>${index + 1}. ${q.question}</p>`;
+                q.options.forEach(option => {
+                    let btn = document.createElement("button");
+                    btn.classList.add("option");
+                    btn.innerText = option;
+                    btn.onclick = () => selectAnswer(index, option);
+                    questionBlock.appendChild(btn);
+                });
+                quizContainer.appendChild(questionBlock);
+            });
+        }
+        
+        let selectedAnswers = {};
+        function selectAnswer(questionIndex, answer) {
+            selectedAnswers[questionIndex] = answer;
+        }
+        
+        function submitQuiz() {
+            let score = 0;
+            questions.forEach((q, index) => {
+                if (selectedAnswers[index] === q.answer) {
+                    score++;
+                }
+            });
+            alert(`You scored ${score} out of ${questions.length}!`);
+        }
+        
+        loadQuiz();
+    </script>
+</body>
+</html>

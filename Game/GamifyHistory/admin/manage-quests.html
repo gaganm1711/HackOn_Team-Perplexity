@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Quests</title>
+  <link rel="stylesheet" href="style_a.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="manage-users.html">Manage Users</a></li>
+        <li><a href="manage-quest.html">Manage Quests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Manage Quests</h2>
+      
+      <div id="search-bar">
+        <input type="text" placeholder="Search quests...">
+        <button>Search</button>
+      </div>
+
+      <table id="quest-table">
+        <thead>
+          <tr>
+            <th>Quest Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Quest 1</td>
+            <td>Complete the coding challenge.</td>
+            <td>Active</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Quest 2</td>
+            <td>Learn about web development.</td>
+            <td>Completed</td>
+            <td>
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="add-quest-btn">Add New Quest</button>
+    </section>
+
+    <!-- Modal for adding/editing quests -->
+    <div id="quest-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Manage Quest</h3>
+        <form id="quest-form">
+          <label for="quest-name">Quest Name:</label>
+          <input type="text" id="quest-name" required>
+
+          <label for="quest-description">Description:</label>
+          <textarea id="quest-description" required></textarea>
+
+          <label for="quest-status">Status:</label>
+          <select id="quest-status" required>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+            <option value="archived">Archived</option>
+          </select>
+
+          <button type="submit">Save Quest</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quest Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="script_a.js"></script>
+</body>
+</html>

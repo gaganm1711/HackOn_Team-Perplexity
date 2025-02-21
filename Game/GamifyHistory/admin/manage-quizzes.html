@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage History Quizzes</title>
+  <link rel="stylesheet" href="style_b.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="manage-users.html">Manage Users</a></li>
+        <li><a href="manage-quests.html">Manage Quests</a></li>
+        <li><a href="manage-quizzes.html">Manage History Quizzes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Manage History Quizzes</h2>
+      
+      <div id="search-bar">
+        <input type="text" placeholder="Search history quizzes..." id="quiz-search">
+        <button onclick="searchQuiz()">Search</button>
+      </div>
+
+      <table id="quiz-table">
+        <thead>
+          <tr>
+            <th>Quiz Title</th>
+            <th>Description</th>
+            <th>Era</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="quiz-list">
+          <tr>
+            <td>Ancient Civilizations</td>
+            <td>Test your knowledge on the great civilizations of history.</td>
+            <td>Ancient History</td>
+            <td>Active</td>
+            <td>
+              <button class="edit" onclick="editQuiz(1)">Edit</button>
+              <button class="delete" onclick="deleteQuiz(1)">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>World War II</td>
+            <td>Learn about the significant events of World War II.</td>
+            <td>Modern History</td>
+            <td>Completed</td>
+            <td>
+              <button class="edit" onclick="editQuiz(2)">Edit</button>
+              <button class="delete" onclick="deleteQuiz(2)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="add-quiz-btn" onclick="openModal()">Add New History Quiz</button>
+    </section>
+
+    <!-- Modal for adding/editing quizzes -->
+    <div id="quiz-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Manage History Quiz</h3>
+        <form id="quiz-form" onsubmit="saveQuiz(event)">
+          <label for="quiz-title">Quiz Title:</label>
+          <input type="text" id="quiz-title" required>
+
+          <label for="quiz-description">Description:</label>
+          <textarea id="quiz-description" required></textarea>
+
+          <label for="quiz-era">Era:</label>
+          <select id="quiz-era" required>
+            <option value="ancient">Ancient History</option>
+            <option value="medieval">Medieval History</option>
+            <option value="modern">Modern History</option>
+          </select>
+
+          <label for="quiz-status">Status:</label>
+          <select id="quiz-status" required>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+            <option value="archived">Archived</option>
+          </select>
+
+          <button type="submit">Save Quiz</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GamifyHistory. All rights reserved.</p>
+  </footer>
+
+  <script src="script_b.js"></script>
+</body>
+</html>

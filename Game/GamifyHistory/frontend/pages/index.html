@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamifyHistory - Explore the Past, Shape the Future</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">HISTARA</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quests.html">Quests</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-logo">
+            <img src="../assets/images/logo.png" alt="HISTARA Logo">
+        </div>
+        <h1 id="hero-text">Welcome to HISTARA - Era Of History</h1>
+        <p>Embark on an interactive journey through time! Play quests, solve quizzes, and explore history like never before.</p>
+        <div class="hero-buttons">
+            <a href="quests.html" class="btn">Start a Quest</a>
+            <a href="quizzes.html" class="btn">Take a Quiz</a>
+            <a href="forum.html" class="btn">Join the Forum</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <h2>🎭 Live Historical Quests</h2>
+            <p>Step into the past and make decisions that shape history.</p>
+        </div>
+        <div class="feature">
+            <h2>🧠 Engaging Quizzes</h2>
+            <p>Test your knowledge with interactive quizzes.</p>
+        </div>
+        <div class="feature">
+            <h2>💬 Student Forum</h2>
+            <p>Discuss historical events and solve queries with peers.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GamifyHistory. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Typewriter Effect for Hero Section
+            const heroText = document.getElementById("hero-text");
+            const text = "Welcome to HISTARA - Era Of History";
+            let index = 0;
+
+            function typeEffect() {
+                if (index < text.length) {
+                    heroText.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, 50);
+                }
+            }
+            heroText.textContent = ""; // Clear existing text
+            typeEffect();
+
+            // Sticky Navbar Effect
+            window.addEventListener("scroll", function() {
+                let header = document.querySelector("header");
+                if (window.scrollY > 50) {
+                    header.style.background = "rgba(0, 0, 0, 0.8)";
+                    header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
+                } else {
+                    header.style.background = "transparent";
+                    header.style.boxShadow = "none";
+                }
+            });
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70,
+                            behavior: "smooth"
+                        });
+                    } else {
+                        window.location.href = this.getAttribute("href");
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

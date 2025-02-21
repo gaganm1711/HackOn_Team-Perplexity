@@ -1,0 +1,43 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "history_enthusiast",
+            "email": "historylover@example.com",
+            "avatar": "assets/users/user1.jpg",
+            "points": 1200,
+            "rank": "History Scholar",
+            "badges": ["Ancient Expert", "Quiz Master"],
+            "quizzes_taken": 15,
+            "quizzes_won": 8,
+            "forum_posts": 5,
+            "joined": "2024-06-15T10:00:00Z"
+        },
+        {
+            "id": 2,
+            "username": "medieval_knight",
+            "email": "medievalfan@example.com",
+            "avatar": "assets/users/user2.jpg",
+            "points": 980,
+            "rank": "Medieval Explorer",
+            "badges": ["Knight of Knowledge"],
+            "quizzes_taken": 12,
+            "quizzes_won": 6,
+            "forum_posts": 3,
+            "joined": "2024-07-20T14:30:00Z"
+        },
+        {
+            "id": 3,
+            "username": "revolution_fan",
+            "email": "revolutionary@example.com",
+            "avatar": "assets/users/user3.jpg",
+            "points": 1450,
+            "rank": "Revolutionary Genius",
+            "badges": ["Quiz Master", "Debate Champion"],
+            "quizzes_taken": 18,
+            "quizzes_won": 12,
+            "forum_posts": 7,
+            "joined": "2024-08-05T09:45:00Z"
+        }
+    ]
+}

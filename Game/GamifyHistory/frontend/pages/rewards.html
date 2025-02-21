@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards | GamifyHistory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+            color: #f5f5f5;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            border-bottom: 3px solid #ffcc00;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #ffcc00;
+            color: #1e1e2f;
+            border-radius: 5px;
+        }
+
+        /* Rewards Section */
+        .rewards-container {
+            margin-top: 100px;
+            padding: 40px;
+        }
+
+        .rewards-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.5);
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .reward-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .reward-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .reward-card h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .reward-card p {
+            font-size: 16px;
+        }
+
+        .claim-button {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #1e1e2f;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .claim-button:hover {
+            background: linear-gradient(90deg, #ff9900, #ff6600);
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            color: #f5f5f5;
+            margin-top: 50px;
+            font-size: 14px;
+            box-shadow: 0 -2px 10px rgba(255, 204, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html".html">Home</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="quests.html">Quests</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+
+    <div class="rewards-container">
+        <h1 class="rewards-title">🏆 Your Rewards</h1>
+        <div class="rewards-grid">
+            <div class="reward-card">
+                <h3>Golden Explorer Badge</h3>
+                <p>Unlocked after completing 10 history quests.</p>
+                <a href="#" class="claim-button">Claim Reward</a>
+            </div>
+            <div class="reward-card">
+                <h3>Ancient Scholar Medal</h3>
+                <p>Awarded for scoring 90%+ in history quizzes.</p>
+                <a href="#" class="claim-button">Claim Reward</a>
+            </div>
+            <div class="reward-card">
+                <h3>Time Traveler Trophy</h3>
+                <p>Given to players who reach the top 10 leaderboard.</p>
+                <a href="#" class="claim-button">Claim Reward</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 GamifyHistory. All Rights Reserved.
+    </footer>
+</body>
+</html>

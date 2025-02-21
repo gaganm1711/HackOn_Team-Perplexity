@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum | GamifyHistory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        nav .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f5f5f5;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: #1e1e2f;
+            transform: scale(1.1);
+        }
+
+        .forum-container {
+            margin-top: 100px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+        }
+
+        .forum-header {
+            font-size: 28px;
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .thread {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .thread:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .thread-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .thread img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .thread-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thread-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .thread-meta {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .start-thread-btn {
+            background: #ffcc00;
+            color: #1e1e2f;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .start-thread-btn:hover {
+            background: #ff9900;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GamifyHistory</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="quests.html">Quests</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="forum-container">
+        <div class="forum-header">Community Forum</div>
+        
+        <div class="thread">
+            <div class="thread-content">
+                <img src="user1.jpg" alt="User Avatar">
+                <div class="thread-info">
+                    <span class="thread-title">Best Strategies for History Quizzes</span>
+                    <span class="thread-meta">Posted by Ananya | 15 Replies | 234 Views</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="thread">
+            <div class="thread-content">
+                <img src="user2.jpg" alt="User Avatar">
+                <div class="thread-info">
+                    <span class="thread-title">Discuss the Ancient Indian Empires</span>
+                    <span class="thread-meta">Posted by Rajesh | 8 Replies | 198 Views</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="thread">
+            <div class="thread-content">
+                <img src="user3.jpg" alt="User Avatar">
+                <div class="thread-info">
+                    <span class="thread-title">Need Help with Medieval Era Facts</span>
+                    <span class="thread-meta">Posted by Priya | 12 Replies | 275 Views</span>
+                </div>
+            </div>
+        </div>
+        
+        <button class="start-thread-btn">Start a Discussion</button>
+    </div>
+</body>
+</html>
