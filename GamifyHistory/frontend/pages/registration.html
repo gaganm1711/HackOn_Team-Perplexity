@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Machine Registration | GamifyHistory</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+            overflow: hidden;
+        }
+
+        .taskbar {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            border-bottom: 3px solid #d4af37;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .taskbar a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .taskbar a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        .registration-container {
+            position: relative;
+            width: 400px;
+            padding: 40px;
+            background: rgba(10, 10, 10, 0.9);
+            border-radius: 20px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.7);
+            text-align: center;
+            animation: pulseGlow 3s infinite alternate;
+            margin-top: 50px;
+        }
+
+        .registration-header {
+            font-size: 26px;
+            color: #d4af37;
+            text-shadow: 0px 0px 15px #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+            text-align: center;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 10px #d4af37;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background: #d4af37;
+            border: none;
+            border-radius: 25px;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #b8860b;
+            transform: translateY(-3px);
+            box-shadow: 0px 0px 20px rgba(212, 175, 55, 0.7);
+        }
+
+        .footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .footer a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px #ffd700;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px #d4af37; }
+            100% { box-shadow: 0 0 30px #d4af37; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="taskbar">
+        <a href="index.html">Home</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="quests.html">Quests</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">Profile</a>
+    </nav>
+    <div class="registration-container">
+        <div class="registration-header">
+            🚀 REGISTER FOR TIME MACHINE 🚀
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input-group">
+            <input type="email" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Password" required>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Confirm Password" required>
+        </div>
+        <button class="register-btn">Sign Up</button>
+        <div class="footer">
+            <span>Already have an account? <a href="login.html">Login</a></span>
+        </div>
+    </div>
+</body>
+</html>

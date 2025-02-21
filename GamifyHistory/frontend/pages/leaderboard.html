@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard | GamifyHistory</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 80px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #ffcc00;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .leaderboard {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .leaderboard th, .leaderboard td {
+            padding: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .leaderboard th {
+            background: rgba(255, 204, 0, 0.3);
+            color: #ffcc00;
+            font-size: 20px;
+        }
+
+        .leaderboard tr:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .rank {
+            font-weight: bold;
+            color: #ffcc00;
+            font-size: 20px;
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #ffcc00;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge {
+            background: linear-gradient(90deg, #ffcc00, #ff9900);
+            color: #1e1e2f;
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+        }
+
+        .highlight {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { background: rgba(255, 204, 0, 0.3); }
+            100% { background: rgba(255, 204, 0, 0.6); }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .leaderboard th, .leaderboard td {
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Leaderboard 🏆</h1>
+        <table class="leaderboard">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Points</th>
+                    <th>Badges</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+                <!-- Players will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const players = [
+                { name: "Aryan Sharma", points: 2500, img: "profile1.jpg", badge: "Gold Champion" },
+                { name: "Meera Patel", points: 2300, img: "profile2.jpg", badge: "Silver Star" },
+                { name: "Kabir Gupta", points: 2100, img: "profile3.jpg", badge: "Bronze Achiever" },
+                { name: "Riya Singh", points: 1900, img: "profile4.jpg", badge: "Top Performer" },
+                { name: "Aditya Verma", points: 1700, img: "profile5.jpg", badge: "Elite Player" }
+            ];
+
+            function loadLeaderboard() {
+                const leaderboardBody = document.getElementById("leaderboard-body");
+                leaderboardBody.innerHTML = ""; // Clear existing content
+
+                // Sort players by points (descending order)
+                players.sort((a, b) => b.points - a.points);
+
+                players.forEach((player, index) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="rank ${index === 0 ? 'highlight' : ''}">#${index + 1}</td>
+                        <td class="user"><img src="${player.img}" class="profile-img"> ${player.name}</td>
+                        <td>${player.points}</td>
+                        <td><span class="badge">${player.badge}</span></td>
+                    `;
+                    leaderboardBody.appendChild(row);
+                });
+            }
+
+            loadLeaderboard();
+        });
+    </script>
+</body>
+</html>

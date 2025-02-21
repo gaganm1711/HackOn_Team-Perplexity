@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes | GamifyHistory</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cinzel', serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #000;
+            color: #e8d3a9;
+        }
+
+        /* Navigation Bar */
+        header {
+            background: rgba(10, 5, 2, 0.98);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.6);
+            border-bottom: 4px solid #d4af37;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        nav .logo img {
+            height: 60px;
+            transition: transform 0.3s ease-in-out;
+            filter: brightness(80%);
+        }
+
+        nav .logo img:hover {
+            transform: scale(1.1);
+            filter: brightness(100%);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #fff;
+            background: rgba(255, 215, 0, 0.2);
+            text-shadow: 0px 0px 10px #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 180px 10%;
+            background: rgba(10, 10, 10, 0.9);
+            box-shadow: 0px 0px 100px rgba(212, 175, 55, 0.4);
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            color: #ffcc00;
+            text-shadow: 6px 6px 20px rgba(255, 223, 0, 0.9);
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+            opacity: 0.85;
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            padding: 120px 10%;
+            text-align: center;
+        }
+
+        .quiz-section h1 {
+            font-size: 48px;
+            color: #ffdf91;
+            text-shadow: 4px 4px 20px rgba(255, 223, 145, 0.9);
+        }
+
+        /* Quiz Cards */
+        .quiz-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .quiz-card {
+            background: rgba(15, 15, 15, 0.95);
+            padding: 25px;
+            width: 400px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 8px 25px rgba(255, 223, 0, 0.6);
+            transition: all 0.5s ease-in-out;
+            border: 3px solid #ffcc00;
+        }
+
+        .quiz-card:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(255, 223, 0, 0.9);
+        }
+
+        .quiz-card img {
+            width: 100%;
+            height: 220px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 2px solid #ffcc00;
+        }
+
+        .quiz-card h2 {
+            color: #ffdf91;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        /* Mystery Section */
+        .mystery {
+            text-align: center;
+            padding: 120px 10%;
+            background: rgba(15, 15, 15, 0.95);
+            margin-top: 60px;
+        }
+
+        .mystery h2 {
+            color: #ffcc00;
+            font-size: 40px;
+            text-shadow: 3px 3px 15px rgba(255, 223, 0, 0.9);
+        }
+
+        .mystery-btn {
+            background: #990000;
+            color: white;
+            padding: 14px 28px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .mystery-btn:hover {
+            background: #ff0000;
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.9);
+        }
+
+        /* Footer */
+        footer {
+            padding: 18px;
+            background: rgba(0, 0, 0, 0.95);
+            margin-top: 60px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.png" alt="GamifyHistory Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="play.html">Play</a></li>
+                <li><a href="quizzes.html" class="active">Quizzes</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Test Your Knowledge</h1>
+        <p>Challenge yourself with exciting history quizzes and earn rewards!</p>
+    </section>
+
+    <!-- Quiz Categories -->
+    <section class="quiz-section">
+        <h1>Choose Your Challenge</h1>
+        <div class="quiz-list">
+            <div class="quiz-card">
+                <img src="assets/ancient.jpg" alt="Ancient History">
+                <h2>Ancient Civilizations</h2>
+                <p>Explore the mysteries of Egypt, Rome, and beyond!</p>
+                <a href="quiz-ancient.html" class="btn">Start Quiz</a>
+            </div>
+
+            <div class="quiz-card">
+                <img src="assets/medieval.jpg" alt="Medieval History">
+                <h2>Medieval Legends</h2>
+                <p>Test your knowledge of knights, kings, and castles.</p>
+                <a href="quiz-medieval.html" class="btn">Start Quiz</a>
+            </div>
+
+            <div class="quiz-card">
+                <img src="assets/modern.jpg" alt="Modern History">
+                <h2>Modern Revolutions</h2>
+                <p>Unravel the events that shaped the world today.</p>
+                <a href="quiz-modern.html" class="btn">Start Quiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mystery Bonus Quiz -->
+    <section class="mystery">
+        <h2>??? Mystery Challenge ???</h2>
+        <p>Dare to take on a random history challenge?</p>
+        <button class="mystery-btn">Unlock Quiz</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GamifyHistory. All Rights Reserved.</p>
+    </footer>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll("nav ul li a").forEach(anchor => {
+            anchor.addEventListener("click", function(event) {
+                if (this.getAttribute("href").startsWith("#")) {
+                    event.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
+    
+        // Mystery Quiz Redirection
+        const mysteryBtn = document.querySelector(".mystery-btn");
+        if (mysteryBtn) {
+            mysteryBtn.addEventListener("click", () => {
+                const quizzes = [
+                    "quiz-ancient.html",
+                    "quiz-medieval.html",
+                    "quiz-modern.html"
+                ];
+                const randomQuiz = quizzes[Math.floor(Math.random() * quizzes.length)];
+                window.location.href = randomQuiz;
+            });
+        }
+    
+        // Hover Effect on Quiz Cards
+        document.querySelectorAll(".quiz-card").forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "scale(1.1)";
+                card.style.transition = "transform 0.3s ease-in-out";
+            });
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "scale(1)";
+            });
+        });
+    });
+    </script>
+0
+</body>
+</html>

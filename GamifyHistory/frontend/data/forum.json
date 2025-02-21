@@ -1,0 +1,70 @@
+{
+    "forum": [
+        {
+            "id": 1,
+            "user": "history_enthusiast",
+            "avatar": "assets/users/user1.jpg",
+            "title": "Who was the most influential ruler in ancient history?",
+            "content": "There are many great rulers in history like Alexander the Great, Julius Caesar, and Ashoka. Who do you think had the biggest impact?",
+            "timestamp": "2025-02-21T14:30:00Z",
+            "replies": [
+                {
+                    "user": "history_fanatic",
+                    "avatar": "assets/users/user2.jpg",
+                    "content": "I think Qin Shi Huang was incredibly influential. He united China and built the Great Wall!",
+                    "timestamp": "2025-02-21T15:00:00Z"
+                },
+                {
+                    "user": "medieval_master",
+                    "avatar": "assets/users/user3.jpg",
+                    "content": "Ashoka's role in spreading Buddhism globally was massive. His reign shaped many cultures.",
+                    "timestamp": "2025-02-21T16:45:00Z"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "user": "medieval_knight",
+            "avatar": "assets/users/user4.jpg",
+            "title": "What were the real causes of the fall of the Roman Empire?",
+            "content": "I've read about economic decline, military issues, and invasions. But what do you think was the biggest factor?",
+            "timestamp": "2025-02-20T10:15:00Z",
+            "replies": [
+                {
+                    "user": "rome_scholar",
+                    "avatar": "assets/users/user5.jpg",
+                    "content": "I think internal corruption and political instability weakened the empire from within.",
+                    "timestamp": "2025-02-20T11:00:00Z"
+                },
+                {
+                    "user": "historian123",
+                    "avatar": "assets/users/user6.jpg",
+                    "content": "Don't forget the economic struggles! Heavy taxation and inflation played a huge role.",
+                    "timestamp": "2025-02-20T12:30:00Z"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "user": "revolution_fan",
+            "avatar": "assets/users/user7.jpg",
+            "title": "Which revolution changed history the most?",
+            "content": "The French Revolution, American Revolution, or the Industrial Revolution? Which one had the most lasting impact?",
+            "timestamp": "2025-02-19T18:40:00Z",
+            "replies": [
+                {
+                    "user": "world_changer",
+                    "avatar": "assets/users/user8.jpg",
+                    "content": "The Industrial Revolution! It transformed economies and societies permanently.",
+                    "timestamp": "2025-02-19T19:15:00Z"
+                },
+                {
+                    "user": "freedom_fighter",
+                    "avatar": "assets/users/user9.jpg",
+                    "content": "I’d say the American Revolution. It inspired other independence movements worldwide.",
+                    "timestamp": "2025-02-19T20:00:00Z"
+                }
+            ]
+        }
+    ]
+}

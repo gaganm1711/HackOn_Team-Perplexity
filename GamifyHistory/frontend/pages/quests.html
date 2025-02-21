@@ -3,72 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quests - GamifyHistory</title>
-    <link rel="stylesheet" href="../styles/quests.css"> <!-- Link to CSS -->
+    <title>GamifyHistory - Play</title>
+    <link rel="stylesheet" href="play.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                <img src="assets/logo.png" alt="GamifyHistory Logo">
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="quests.html" class="active">Quests</a></li>
-                <li><a href="quizzes.html">Quizzes</a></li>
                 <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="profile.html">Profile</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="quests">
-            <h1>Choose Your Quest</h1>
-            <p>Embark on thrilling historical adventures, complete challenges, and test your knowledge.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Step Into the Pages of History</h1>
+        <p>Time is calling. Will you answer? Travel across ancient civilizations, command armies, uncover lost secrets, and shape the course of history itself.</p>
+    </section>
 
-            <div class="quest-list">
-                <div class="quest">
-                    <img src="assets/ancient.jpg" alt="Ancient Civilization">
-                    <h2>Ancient Civilization Quest</h2>
-                    <span class="difficulty easy">Easy</span>
-                    <p>Uncover the mysteries of ancient civilizations like Egypt, Rome, and Mesopotamia!</p>
-                    <p><strong>Estimated Time:</strong> 15-20 mins</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 40%;"></div>
-                    </div>
-                    <a href="#" class="btn">Continue Quest</a>
-                </div>
-
-                <div class="quest">
-                    <img src="assets/medieval.jpg" alt="Medieval Kingdoms">
-                    <h2>Medieval Kingdoms Quest</h2>
-                    <span class="difficulty medium">Medium</span>
-                    <p>Travel back to the medieval era and solve intriguing mysteries of kings and knights.</p>
-                    <p><strong>Estimated Time:</strong> 20-30 mins</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 60%;"></div>
-                    </div>
-                    <a href="#" class="btn">Continue Quest</a>
-                </div>
-
-                <div class="quest">
-                    <img src="assets/worldwar.jpg" alt="World Wars">
-                    <h2>World Wars Quest</h2>
-                    <span class="difficulty hard">Hard</span>
-                    <p>Test your knowledge of World War history through interactive battles and strategies.</p>
-                    <p><strong>Estimated Time:</strong> 30-45 mins</p>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: 25%;"></div>
-                    </div>
-                    <a href="#" class="btn">Start Quest</a>
-                </div>
+    <!-- Play Section -->
+    <section class="quests">
+        <h1 class="title">Choose Your Historical Quest</h1>
+        <div class="quest-list">
+            
+            <div class="quest">
+                <img src="assets/egypt.jpg" alt="Ancient Egypt">
+                <h2>Ancient Egypt</h2>
+                <p>Unravel the secrets of the pyramids and the Pharaohs! Can you escape the hidden traps?</p>
+                <a href="#" class="btn">Enter the Sands</a>
             </div>
-        </section>
-    </main>
 
+            <div class="quest">
+                <img src="assets/rome.jpg" alt="Roman Empire">
+                <h2>Roman Empire</h2>
+                <p>March with the legions and discover the glory of Rome. Will you be a senator or a warrior?</p>
+                <a href="#" class="btn">Join the Empire</a>
+            </div>
+
+            <div class="quest">
+                <img src="assets/medieval.jpg" alt="Medieval Europe">
+                <h2>Medieval Europe</h2>
+                <p>Survive the dark ages and rise as a knight or ruler. Will you lead your kingdom to victory?</p>
+                <a href="#" class="btn">Take the Throne</a>
+            </div>
+
+            <div class="quest">
+                <img src="assets/samurai.jpg" alt="Feudal Japan">
+                <h2>Feudal Japan</h2>
+                <p>Walk the path of the samurai and master Bushido. Do you have the discipline to succeed?</p>
+                <a href="#" class="btn">Follow the Code</a>
+            </div>
+
+            <div class="quest">
+                <img src="assets/indus.jpg" alt="Indus Valley Civilization">
+                <h2>Indus Valley</h2>
+                <p>Explore the mysteries of one of the world's oldest civilizations. What secrets lie within?</p>
+                <a href="#" class="btn">Discover the Unknown</a>
+            </div>
+
+            <div class="quest">
+                <img src="assets/vikings.jpg" alt="Viking Era">
+                <h2>The Viking Age</h2>
+                <p>Raid and conquer like the legendary Norsemen. Will you make it to Valhalla?</p>
+                <a href="#" class="btn">Set Sail</a>
+            </div>
+
+            <div class="quest">
+                <img src="assets/revolution.jpg" alt="The Great Revolutions">
+                <h2>Revolutionary Wars</h2>
+                <p>Lead rebellions, fight for freedom, and change the world. Will history remember your name?</p>
+                <a href="#" class="btn">Ignite the Fire</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mystery Section -->
+    <section class="mystery">
+        <h2>💀 Hidden Quests Await... Will You Find Them? 💀</h2>
+        <p>Not all stories are in the history books. Some secrets must be uncovered.</p>
+        <button class="mystery-btn">Find Hidden Quests</button>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 GamifyHistory. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

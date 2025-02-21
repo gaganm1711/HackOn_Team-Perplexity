@@ -1,0 +1,61 @@
+{
+    "quests": [
+      {
+        "id": 1,
+        "title": "The Ancient Explorer",
+        "description": "Answer 5 questions about ancient civilizations.",
+        "reward": 50,
+        "type": "quiz",
+        "category": "ancient"
+      },
+      {
+        "id": 2,
+        "title": "Medieval Mastermind",
+        "description": "Score 80% or higher in the medieval history quiz.",
+        "reward": 75,
+        "type": "quiz",
+        "category": "medieval"
+      },
+      {
+        "id": 3,
+        "title": "Modern Historian",
+        "description": "Complete all modern history quizzes.",
+        "reward": 100,
+        "type": "quiz",
+        "category": "modern"
+      },
+      {
+        "id": 4,
+        "title": "Daily Challenge",
+        "description": "Complete any quiz today.",
+        "reward": 30,
+        "type": "daily",
+        "category": "any"
+      },
+      {
+        "id": 5,
+        "title": "Streak Keeper",
+        "description": "Complete a quiz 3 days in a row.",
+        "reward": 120,
+        "type": "streak",
+        "category": "any"
+      },
+      {
+        "id": 6,
+        "title": "Battle of Wits",
+        "description": "Win 5 multiplayer quiz battles.",
+        "reward": 150,
+        "type": "multiplayer",
+        "category": "battle"
+      },
+      {
+        "id": 7,
+        "title": "Quiz Marathon",
+        "description": "Complete 10 quizzes in a single day.",
+        "reward": 200,
+        "type": "marathon",
+        "category": "any"
+      }
+    ]
+  }
+  
